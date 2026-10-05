@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="sq">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101010" />
-    <meta name="description" content="Portofoli i krijimeve të DROB Labs: Fresh Look, Go Travel & Tours dhe aplikacioni My FreshLook." />
-    <title>DROB Labs — Krijime reale</title>
+    <meta name="description" content="The DROB Labs portfolio: Fresh Look, Go Travel & Tours, and the My FreshLook app." data-i18n-meta="content|meta.description" />
+    <title data-i18n="page.title">DROB Labs — Real work</title>
     <link rel="icon" type="image/png" href="assets/drob-labs-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,6 +63,9 @@
       .nav-link:hover::after, .nav-link.active::after { right: 0; }
       .nav-cta, .button-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 4px; background: var(--orange); color: var(--black); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .2s ease, transform .2s ease; }
       .nav-cta:hover, .button-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+      .language-switcher { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); }
+      .language-option { min-width: 38px; min-height: 30px; border: 0; border-radius: 999px; color: var(--gray); background: transparent; font: 700 .7rem var(--body); letter-spacing: .08em; cursor: pointer; transition: background .2s ease, color .2s ease; }
+      .language-option:hover, .language-option.active { color: var(--white); background: var(--black); }
       .menu-button { display: none; position: relative; z-index: 22; width: 34px; height: 34px; margin-left: auto; border: 0; padding: 5px; color: var(--black); background: transparent; cursor: pointer; }
       .menu-button span { display: block; width: 24px; height: 2px; margin: 5px 0; background: currentColor; }
       .menu-button::before { content: "☰"; display: none; color: var(--black); font-size: 1.45rem; line-height: 1; }
@@ -187,7 +190,7 @@
         .nav-links.is-open { transform: translateY(0); }
         .nav-link { padding: 17px 0; border-bottom: 1px solid var(--line); }
         .nav-link::after { bottom: -1px; }
-        .nav-cta { margin-top: 13px; }
+        .nav-cta, .language-switcher { margin-top: 13px; }
         .hero { padding-top: 76px; }
         .hero-grid { gap: 52px; }
         .hero h1 { max-width: 100%; font-size: clamp(2.7rem, 12.5vw, 5rem); overflow-wrap: anywhere; }
@@ -216,19 +219,23 @@
     </style>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Kalo te përmbajtja</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip.content">Skip to content</a>
     <header class="site-header">
       <div class="shell nav">
-        <a class="brand" href="#top" aria-label="DROB Labs në krye">
+        <a class="brand" href="#top" aria-label="DROB Labs home">
           <img src="assets/drob-labs-icon.png" alt="" />
           <span class="brand-wordmark">DROB <span>Labs</span></span>
         </a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Hap menunë</span></button>
-        <nav class="nav-links" id="nav-links" aria-label="Navigimi kryesor">
-          <a class="nav-link active" href="#projects">Krijimet</a>
-          <a class="nav-link" href="#process">Si punojmë</a>
-          <a class="nav-link" href="#contact">Kontakt</a>
-          <a class="nav-cta" href="#contact">Na kontakto</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only" data-i18n="menu.open">Open menu</span></button>
+        <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+          <a class="nav-link active" href="#projects" data-i18n="nav.projects">Projects</a>
+          <a class="nav-link" href="#process" data-i18n="nav.process">How we work</a>
+          <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="nav-cta" href="#contact" data-i18n="nav.cta">Get in touch</a>
+          <div class="language-switcher" role="group" aria-label="Language selector">
+            <button class="language-option active" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="language-option" type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
         </nav>
       </div>
     </header>
@@ -237,76 +244,76 @@
       <section class="hero" id="top">
         <div class="shell hero-grid">
           <div class="hero-content reveal is-visible">
-            <div class="eyebrow">Portofoli / DROB Labs</div>
-            <h1>Krijime <span class="accent">reale.</span><br />Përvoja që punojnë.</h1>
-            <p class="lede hero-copy">Nga prezenca online te produktet mobile, ne krijojmë përvoja digjitale që duken qartë, ndihen natyrshëm dhe bëjnë punën e tyre.</p>
+            <div class="eyebrow" data-i18n="hero.eyebrow">Portfolio / DROB Labs</div>
+            <h1 data-i18n-html="hero.title">Real <span class="accent">work.</span><br />Experiences that work.</h1>
+            <p class="lede hero-copy" data-i18n="hero.copy">From online presence to mobile products, we create digital experiences that feel clear, natural, and ready to do their job.</p>
             <div class="hero-actions">
-              <a class="button-primary" href="#projects">Shiko krijimet</a>
-              <a class="button-secondary" href="#contact">Nis një bisedë</a>
+              <a class="button-primary" href="#projects" data-i18n="hero.primary">See the work</a>
+              <a class="button-secondary" href="#contact" data-i18n="hero.secondary">Start a conversation</a>
             </div>
             <div class="hero-foot">
-              <span><strong>03</strong> / projekte të prezantuara</span>
-              <span><strong>02</strong> / website-e</span>
-              <span><strong>01</strong> / aplikacion</span>
+              <span><strong>03</strong> / <span data-i18n="hero.stat.projects">featured projects</span></span>
+              <span><strong>02</strong> / <span data-i18n="hero.stat.websites">websites</span></span>
+              <span><strong>01</strong> / <span data-i18n="hero.stat.app">app</span></span>
             </div>
           </div>
-          <div class="hero-showcase reveal is-visible" aria-label="Pamje nga projektet e DROB Labs">
-            <div class="showcase-frame"><img src="assets/portfolio/freshlook-site.png" alt="Pamje reale nga faqja Fresh Look" /></div>
-            <div class="showcase-frame"><img src="assets/portfolio/gotravel-site.png" alt="Pamje reale nga faqja Go Travel & Tours" /></div>
-            <div class="showcase-frame"><img src="assets/portfolio/appstore-myfreshlook.png" alt="Pamje reale nga listimi i My FreshLook në App Store" /></div>
-            <div class="showcase-stamp">Burime<br />zyrtare</div>
+          <div class="hero-showcase reveal is-visible" aria-label="A view of DROB Labs projects" data-i18n-attr="aria-label|hero.showcase.label">
+            <div class="showcase-frame"><img src="assets/portfolio/freshlook-site.png" alt="Real view of the Fresh Look website" data-i18n-attr="alt|image.freshlook" /></div>
+            <div class="showcase-frame"><img src="assets/portfolio/gotravel-site.png" alt="Real view of the Go Travel & Tours website" data-i18n-attr="alt|image.gotravel" /></div>
+            <div class="showcase-frame"><img src="assets/portfolio/appstore-myfreshlook.png" alt="Real view of My FreshLook on the App Store" data-i18n-attr="alt|image.appstore" /></div>
+            <div class="showcase-stamp"><span data-i18n="hero.stamp.first">Official</span><br /><span data-i18n="hero.stamp.second">sources</span></div>
           </div>
         </div>
       </section>
 
-      <div class="ticker" aria-label="Fokusi i DROB Labs">
-        <div class="ticker-track"><span>Ide në produkte</span><span>Websites që tregojnë</span><span>Aplikacione që lidhen</span><span>Ide në produkte</span><span>Websites që tregojnë</span><span>Aplikacione që lidhen</span></div>
+      <div class="ticker" aria-label="DROB Labs focus" data-i18n-attr="aria-label|ticker.label">
+        <div class="ticker-track"><span data-i18n="ticker.one">Ideas into products</span><span data-i18n="ticker.two">Websites with a point of view</span><span data-i18n="ticker.three">Apps that connect</span><span data-i18n="ticker.one">Ideas into products</span><span data-i18n="ticker.two">Websites with a point of view</span><span data-i18n="ticker.three">Apps that connect</span></div>
       </div>
 
       <section class="section projects-section" id="projects">
         <div class="shell">
           <div class="section-header reveal">
-            <div class="section-label">01 / Krijimet</div>
-            <div><h2>Tre produkte.<br />Një standard i qartë.</h2><p>Këto janë disa nga krijimet tona për Fresh Look dhe Go Travel & Tours. Çdo pamje më poshtë është kapur nga website-i ose store-i zyrtar — pa mockup-e të gjeneruara.</p></div>
+            <div class="section-label" data-i18n="projects.label">01 / Projects</div>
+            <div><h2 data-i18n-html="projects.title">Three products.<br />One clear standard.</h2><p data-i18n="projects.intro">Here are a few of our creations for Fresh Look and Go Travel & Tours. Every image below was captured from the official website or store listing — no generated mockups.</p></div>
           </div>
 
           <div class="project-grid">
             <article class="project-card featured freshlook-card reveal">
-              <div class="project-media"><img src="assets/portfolio/freshlook-site.png" alt="Fresh Look Aesthetics website, pamje reale e faqes kryesore" loading="lazy" /></div>
+              <div class="project-media"><img src="assets/portfolio/freshlook-site.png" alt="Fresh Look Aesthetics website, real homepage view" data-i18n-attr="alt|image.freshlook.card" loading="lazy" /></div>
               <div class="project-info">
                 <div>
-                  <div class="project-top"><span class="tag">Website / E-commerce</span><span class="project-index">01</span></div>
+                  <div class="project-top"><span class="tag" data-i18n="project.freshlook.tag">Website / E-commerce</span><span class="project-index">01</span></div>
                   <h3>Fresh Look Aesthetics</h3>
-                  <p>Një përvojë e qetë dhe e qartë për trajtime estetike, produkte skincare, akademinë dhe rezervimet online.</p>
+                  <p data-i18n="project.freshlook.copy">A calm, clear experience for aesthetic treatments, skincare products, the academy, and online bookings.</p>
                 </div>
-                <div><div class="project-meta"><span>freshlook-ks.com</span><span>Web design + build</span></div><a class="project-link" href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer">Vizito website-in</a></div>
+                <div><div class="project-meta"><span>freshlook-ks.com</span><span data-i18n="meta.web">Web design + build</span></div><a class="project-link" href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer" data-i18n="project.visit">Visit the website</a></div>
               </div>
             </article>
 
             <article class="project-card gotravel-card reveal">
-              <div class="project-media"><img src="assets/portfolio/gotravel-site.png" alt="Go Travel & Tours website, pamje reale e faqes kryesore" loading="lazy" /></div>
+              <div class="project-media"><img src="assets/portfolio/gotravel-site.png" alt="Go Travel & Tours website, real homepage view" data-i18n-attr="alt|image.gotravel.card" loading="lazy" /></div>
               <div class="project-info">
                 <div>
-                  <div class="project-top"><span class="tag">Website / Travel</span><span class="project-index">02</span></div>
+                  <div class="project-top"><span class="tag" data-i18n="project.gotravel.tag">Website / Travel</span><span class="project-index">02</span></div>
                   <h3>Go Travel & Tours</h3>
-                  <p>Një faqe e drejtpërdrejtë për udhëtime, fluturime, hotele dhe paketa pushimesh nga Prishtina dhe Tirana.</p>
+                  <p data-i18n="project.gotravel.copy">A direct travel experience for flights, hotels, and holiday packages from Prishtina and Tirana.</p>
                 </div>
-                <div><div class="project-meta"><span>gotravelandtours.al</span><span>Web design + build</span></div><a class="project-link" href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer">Vizito website-in</a></div>
+                <div><div class="project-meta"><span>gotravelandtours.al</span><span data-i18n="meta.web">Web design + build</span></div><a class="project-link" href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer" data-i18n="project.visit">Visit the website</a></div>
               </div>
             </article>
 
             <article class="project-card app-card reveal">
               <div class="project-media app-media">
-                <img src="assets/portfolio/appstore-myfreshlook.png" alt="My FreshLook në App Store, pamje reale e listimit" loading="lazy" />
-                <img src="assets/portfolio/playstore-myfreshlook.png" alt="My FreshLook në Google Play, pamje reale e listimit" loading="lazy" />
+                <img src="assets/portfolio/appstore-myfreshlook.png" alt="My FreshLook on the App Store, real listing view" data-i18n-attr="alt|image.appstore.card" loading="lazy" />
+                <img src="assets/portfolio/playstore-myfreshlook.png" alt="My FreshLook on Google Play, real listing view" data-i18n-attr="alt|image.playstore.card" loading="lazy" />
               </div>
               <div class="project-info">
                 <div>
-                  <div class="project-top"><span class="tag">Mobile app / iOS + Android</span><span class="project-index">03</span></div>
+                  <div class="project-top"><span class="tag" data-i18n="project.app.tag">Mobile app / iOS + Android</span><span class="project-index">03</span></div>
                   <h3>My FreshLook</h3>
-                  <p>Aplikacioni zyrtar për rezervime, vizita, produkte dhe Fresh Points — i disponueshëm në App Store dhe Google Play.</p>
+                  <p data-i18n="project.app.copy">The official app for bookings, visits, products, and Fresh Points — available on the App Store and Google Play.</p>
                 </div>
-                <div><div class="project-meta"><span>App Store + Google Play</span><span>Product experience</span></div><a class="project-link" href="https://apps.apple.com/gb/app/my-freshlook/id6778583576" target="_blank" rel="noreferrer">Shiko në App Store</a></div>
+                <div><div class="project-meta"><span>App Store + Google Play</span><span data-i18n="meta.product">Product experience</span></div><a class="project-link" href="https://apps.apple.com/gb/app/my-freshlook/id6778583576" target="_blank" rel="noreferrer" data-i18n="project.app.link">View on the App Store</a></div>
               </div>
             </article>
           </div>
@@ -315,11 +322,11 @@
 
       <section class="section proof-section">
         <div class="shell proof-grid">
-          <div class="reveal"><div class="section-label">02 / Çfarë shohim</div><h2>Një ekran i mirë e bën hapin tjetër të dukshëm.</h2><p class="proof-intro">Krijimet më të mira nuk kërkojnë shumë shpjegime. Ato krijojnë besim, e bëjnë veprimin të qartë dhe lënë hapësirë për përvojën.</p><p class="proof-note">Pamjet në këtë faqe janë kapur nga <a href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer">freshlook-ks.com</a>, <a href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer">gotravelandtours.al</a> dhe listimet zyrtare të My FreshLook.</p></div>
+          <div class="reveal"><div class="section-label" data-i18n="proof.label">02 / What matters</div><h2 data-i18n="proof.title">A good screen makes the next step obvious.</h2><p class="proof-intro" data-i18n="proof.intro">The best creations do not need much explanation. They build trust, make the action clear, and leave room for the experience.</p><p class="proof-note"><span data-i18n="proof.note.before">The images on this page were captured from </span><a href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer">freshlook-ks.com</a><span data-i18n="proof.note.middle">, </span><a href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer">gotravelandtours.al</a><span data-i18n="proof.note.after">, and the official My FreshLook listings.</span></p></div>
           <div class="proof-list reveal">
-            <article class="proof-item"><div class="proof-index">01</div><div><strong>Identitet që njihet.</strong><p>Ngjyrat, ritmi dhe tipografia i japin secilit produkt një karakter të dallueshëm.</p></div></article>
-            <article class="proof-item"><div class="proof-index">02</div><div><strong>Rrjedhë pa zhurmë.</strong><p>Faqet dhe aplikacioni e çojnë përdoruesin te veprimi i radhës pa e humbur në detaje.</p></div></article>
-            <article class="proof-item"><div class="proof-index">03</div><div><strong>Produkt që vazhdon.</strong><p>Çdo krijim është ndërtuar si një themel që mund të zgjerohet me nevojat e biznesit.</p></div></article>
+            <article class="proof-item"><div class="proof-index">01</div><div><strong data-i18n="proof.item.one.title">An identity people recognize.</strong><p data-i18n="proof.item.one.copy">Color, rhythm, and type give every product a distinct character.</p></div></article>
+            <article class="proof-item"><div class="proof-index">02</div><div><strong data-i18n="proof.item.two.title">A flow without noise.</strong><p data-i18n="proof.item.two.copy">The sites and app move people toward the next action without burying them in detail.</p></div></article>
+            <article class="proof-item"><div class="proof-index">03</div><div><strong data-i18n="proof.item.three.title">A product that can grow.</strong><p data-i18n="proof.item.three.copy">Every creation is built as a foundation that can expand with the business.</p></div></article>
           </div>
         </div>
       </section>
@@ -327,40 +334,229 @@
       <section class="section process-section" id="process">
         <div class="shell">
           <div class="section-header reveal">
-            <div class="section-label">03 / Si punojmë</div>
-            <div><h2>Qartë nga ideja<br />deri te release-i.</h2><p>Një proces i fokusuar, i kuptueshëm dhe i lidhur me atë që duhet të bëjë produkti në jetën reale.</p></div>
+            <div class="section-label" data-i18n="process.label">03 / How we work</div>
+            <div><h2 data-i18n-html="process.title">Clear from idea<br />to release.</h2><p data-i18n="process.intro">A focused, understandable process connected to what the product needs to do in real life.</p></div>
           </div>
           <div class="process-list">
-            <article class="process-item reveal"><div class="process-index">01</div><h3>Kuadrojmë</h3><p>Gjejmë pyetjen e duhur, audiencën dhe drejtimin që ia vlen të ndërtohet.</p></article>
-            <article class="process-item reveal"><div class="process-index">02</div><h3>Formësojmë</h3><p>E kthejmë drejtimin në strukturë, identitet dhe përvojë që mund të kuptohet menjëherë.</p></article>
-            <article class="process-item reveal"><div class="process-index">03</div><h3>Ndërtojmë</h3><p>Krijojmë me hapa të fokusuar, që puna të shihet, testohet dhe përmirësohet ndërsa rritet.</p></article>
-            <article class="process-item reveal"><div class="process-index">04</div><h3>Publikojmë</h3><p>E mbyllim me detajet që krijojnë besim: polish, performancë dhe një release gati për përdorim.</p></article>
+            <article class="process-item reveal"><div class="process-index">01</div><h3 data-i18n="process.one.title">Frame</h3><p data-i18n="process.one.copy">We find the right question, the audience, and a direction worth building.</p></article>
+            <article class="process-item reveal"><div class="process-index">02</div><h3 data-i18n="process.two.title">Shape</h3><p data-i18n="process.two.copy">We turn the direction into structure, identity, and an experience people can understand.</p></article>
+            <article class="process-item reveal"><div class="process-index">03</div><h3 data-i18n="process.three.title">Build</h3><p data-i18n="process.three.copy">We create in focused steps, so the work can be seen, tested, and improved as it grows.</p></article>
+            <article class="process-item reveal"><div class="process-index">04</div><h3 data-i18n="process.four.title">Ship</h3><p data-i18n="process.four.copy">We finish with the details that build confidence: polish, performance, and a release ready to use.</p></article>
           </div>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div class="shell contact-grid reveal">
-          <div><div class="section-label" style="color:var(--black)">04 / Hapi tjetër</div><h2>Ke një ide që meriton të bëhet reale?</h2><p class="lede">Na sill versionin e parë. Bashkë e kthejmë në një drejtim të qartë dhe në një produkt që mund të përdoret.</p><a class="contact-link" href="mailto:hello@droblabs.com">Nis një bisedë</a></div>
-          <div class="contact-aside"><div class="meta">Na shkruaj</div><strong>hello@droblabs.com</strong><p style="margin:8px 0 0; color:#322115">Website-e, aplikacione dhe produkte digjitale.</p></div>
+          <div><div class="section-label" style="color:var(--black)" data-i18n="contact.label">04 / Next step</div><h2 data-i18n="contact.title">Have an idea that deserves to become real?</h2><p class="lede" data-i18n="contact.copy">Bring us the first version. Together, we will turn it into a clear direction and a product people can use.</p><a class="contact-link" href="mailto:hello@droblabs.com" data-i18n="contact.cta">Start a conversation</a></div>
+          <div class="contact-aside"><div class="meta" data-i18n="contact.email.label">Write to us</div><strong>hello@droblabs.com</strong><p style="margin:8px 0 0; color:#322115" data-i18n="contact.aside">Websites, apps, and digital products.</p></div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="shell footer-row">
-        <a class="brand" href="#top" aria-label="Kthehu në krye"><img src="assets/drob-labs-icon.png" alt="" /><span class="brand-wordmark">DROB <span>Labs</span></span></a>
-        <div class="footer-links"><a href="#projects">Krijimet</a><a href="#process">Si punojmë</a><a href="#contact">Kontakt</a></div>
+        <a class="brand" href="#top" aria-label="Back to top"><img src="assets/drob-labs-icon.png" alt="" /><span class="brand-wordmark">DROB <span>Labs</span></span></a>
+        <div class="footer-links"><a href="#projects" data-i18n="footer.projects">Projects</a><a href="#process" data-i18n="footer.process">How we work</a><a href="#contact" data-i18n="footer.contact">Contact</a></div>
         <div class="footer-note">© 2026 DROB Labs / Build Beyond.</div>
       </div>
     </footer>
 
     <script>
+      const translations = {
+        en: {
+          'page.title': 'DROB Labs — Real work',
+          'meta.description': 'The DROB Labs portfolio: Fresh Look, Go Travel & Tours, and the My FreshLook app.',
+          'skip.content': 'Skip to content',
+          'menu.open': 'Open menu',
+          'nav.projects': 'Projects',
+          'nav.process': 'How we work',
+          'nav.contact': 'Contact',
+          'nav.cta': 'Get in touch',
+          'hero.eyebrow': 'Portfolio / DROB Labs',
+          'hero.title': 'Real <span class="accent">work.</span><br />Experiences that work.',
+          'hero.copy': 'From online presence to mobile products, we create digital experiences that feel clear, natural, and ready to do their job.',
+          'hero.primary': 'See the work',
+          'hero.secondary': 'Start a conversation',
+          'hero.stat.projects': 'featured projects',
+          'hero.stat.websites': 'websites',
+          'hero.stat.app': 'app',
+          'hero.showcase.label': 'A view of DROB Labs projects',
+          'hero.stamp.first': 'Official',
+          'hero.stamp.second': 'sources',
+          'image.freshlook': 'Real view of the Fresh Look website',
+          'image.gotravel': 'Real view of the Go Travel & Tours website',
+          'image.appstore': 'Real view of My FreshLook on the App Store',
+          'ticker.label': 'DROB Labs focus',
+          'ticker.one': 'Ideas into products',
+          'ticker.two': 'Websites with a point of view',
+          'ticker.three': 'Apps that connect',
+          'projects.label': '01 / Projects',
+          'projects.title': 'Three products.<br />One clear standard.',
+          'projects.intro': 'Here are a few of our creations for Fresh Look and Go Travel & Tours. Every image below was captured from the official website or store listing — no generated mockups.',
+          'image.freshlook.card': 'Fresh Look Aesthetics website, real homepage view',
+          'project.freshlook.tag': 'Website / E-commerce',
+          'project.freshlook.copy': 'A calm, clear experience for aesthetic treatments, skincare products, the academy, and online bookings.',
+          'meta.web': 'Web design + build',
+          'project.visit': 'Visit the website',
+          'image.gotravel.card': 'Go Travel & Tours website, real homepage view',
+          'project.gotravel.tag': 'Website / Travel',
+          'project.gotravel.copy': 'A direct travel experience for flights, hotels, and holiday packages from Prishtina and Tirana.',
+          'image.appstore.card': 'My FreshLook on the App Store, real listing view',
+          'image.playstore.card': 'My FreshLook on Google Play, real listing view',
+          'project.app.tag': 'Mobile app / iOS + Android',
+          'project.app.copy': 'The official app for bookings, visits, products, and Fresh Points — available on the App Store and Google Play.',
+          'meta.product': 'Product experience',
+          'project.app.link': 'View on the App Store',
+          'proof.label': '02 / What matters',
+          'proof.title': 'A good screen makes the next step obvious.',
+          'proof.intro': 'The best creations do not need much explanation. They build trust, make the action clear, and leave room for the experience.',
+          'proof.note.before': 'The images on this page were captured from ',
+          'proof.note.middle': ', ',
+          'proof.note.after': ', and the official My FreshLook listings.',
+          'proof.item.one.title': 'An identity people recognize.',
+          'proof.item.one.copy': 'Color, rhythm, and type give every product a distinct character.',
+          'proof.item.two.title': 'A flow without noise.',
+          'proof.item.two.copy': 'The sites and app move people toward the next action without burying them in detail.',
+          'proof.item.three.title': 'A product that can grow.',
+          'proof.item.three.copy': 'Every creation is built as a foundation that can expand with the business.',
+          'process.label': '03 / How we work',
+          'process.title': 'Clear from idea<br />to release.',
+          'process.intro': 'A focused, understandable process connected to what the product needs to do in real life.',
+          'process.one.title': 'Frame',
+          'process.one.copy': 'We find the right question, the audience, and a direction worth building.',
+          'process.two.title': 'Shape',
+          'process.two.copy': 'We turn the direction into structure, identity, and an experience people can understand.',
+          'process.three.title': 'Build',
+          'process.three.copy': 'We create in focused steps, so the work can be seen, tested, and improved as it grows.',
+          'process.four.title': 'Ship',
+          'process.four.copy': 'We finish with the details that build confidence: polish, performance, and a release ready to use.',
+          'contact.label': '04 / Next step',
+          'contact.title': 'Have an idea that deserves to become real?',
+          'contact.copy': 'Bring us the first version. Together, we will turn it into a clear direction and a product people can use.',
+          'contact.cta': 'Start a conversation',
+          'contact.email.label': 'Write to us',
+          'contact.aside': 'Websites, apps, and digital products.',
+          'footer.projects': 'Projects',
+          'footer.process': 'How we work',
+          'footer.contact': 'Contact'
+        },
+        de: {
+          'page.title': 'DROB Labs — Echte Projekte',
+          'meta.description': 'Das Portfolio von DROB Labs: Fresh Look, Go Travel & Tours und die My FreshLook-App.',
+          'skip.content': 'Zum Inhalt springen',
+          'menu.open': 'Menü öffnen',
+          'nav.projects': 'Projekte',
+          'nav.process': 'Arbeitsweise',
+          'nav.contact': 'Kontakt',
+          'nav.cta': 'Kontakt aufnehmen',
+          'hero.eyebrow': 'Portfolio / DROB Labs',
+          'hero.title': 'Echte <span class="accent">Projekte.</span><br />Erlebnisse, die wirken.',
+          'hero.copy': 'Von der Online-Präsenz bis zum mobilen Produkt: Wir entwickeln digitale Erlebnisse, die klar, natürlich und bereit für ihre Aufgabe sind.',
+          'hero.primary': 'Projekte ansehen',
+          'hero.secondary': 'Gespräch starten',
+          'hero.stat.projects': 'ausgewählte Projekte',
+          'hero.stat.websites': 'Websites',
+          'hero.stat.app': 'App',
+          'hero.showcase.label': 'Einblicke in die Projekte von DROB Labs',
+          'hero.stamp.first': 'Offizielle',
+          'hero.stamp.second': 'Quellen',
+          'image.freshlook': 'Echte Ansicht der Fresh Look-Website',
+          'image.gotravel': 'Echte Ansicht der Go Travel & Tours-Website',
+          'image.appstore': 'Echte Ansicht von My FreshLook im App Store',
+          'ticker.label': 'Der Fokus von DROB Labs',
+          'ticker.one': 'Ideen werden Produkte',
+          'ticker.two': 'Websites mit Haltung',
+          'ticker.three': 'Apps, die verbinden',
+          'projects.label': '01 / Projekte',
+          'projects.title': 'Drei Produkte.<br />Ein klarer Standard.',
+          'projects.intro': 'Hier zeigen wir einige unserer Arbeiten für Fresh Look und Go Travel & Tours. Jedes Bild wurde von der offiziellen Website oder dem Store-Eintrag aufgenommen – keine generierten Mockups.',
+          'image.freshlook.card': 'Fresh Look Aesthetics-Website, echte Ansicht der Startseite',
+          'project.freshlook.tag': 'Website / E-Commerce',
+          'project.freshlook.copy': 'Eine ruhige, klare Erfahrung für ästhetische Behandlungen, Skincare-Produkte, die Academy und Online-Terminbuchungen.',
+          'meta.web': 'Webdesign + Umsetzung',
+          'project.visit': 'Website ansehen',
+          'image.gotravel.card': 'Go Travel & Tours-Website, echte Ansicht der Startseite',
+          'project.gotravel.tag': 'Website / Reisen',
+          'project.gotravel.copy': 'Eine direkte Reiseerfahrung für Flüge, Hotels und Urlaubspakete ab Pristina und Tirana.',
+          'image.appstore.card': 'My FreshLook im App Store, echte Ansicht des Eintrags',
+          'image.playstore.card': 'My FreshLook bei Google Play, echte Ansicht des Eintrags',
+          'project.app.tag': 'Mobile App / iOS + Android',
+          'project.app.copy': 'Die offizielle App für Buchungen, Besuche, Produkte und Fresh Points – verfügbar im App Store und bei Google Play.',
+          'meta.product': 'Produkterlebnis',
+          'project.app.link': 'Im App Store ansehen',
+          'proof.label': '02 / Was zählt',
+          'proof.title': 'Ein guter Screen macht den nächsten Schritt sichtbar.',
+          'proof.intro': 'Die besten Arbeiten brauchen wenig Erklärung. Sie schaffen Vertrauen, machen die Handlung klar und lassen Raum für das Erlebnis.',
+          'proof.note.before': 'Die Bilder auf dieser Seite wurden aufgenommen von ',
+          'proof.note.middle': ', ',
+          'proof.note.after': ' und den offiziellen My FreshLook-Einträgen.',
+          'proof.item.one.title': 'Eine Identität, die man erkennt.',
+          'proof.item.one.copy': 'Farbe, Rhythmus und Typografie geben jedem Produkt einen eigenen Charakter.',
+          'proof.item.two.title': 'Ein Fluss ohne Ablenkung.',
+          'proof.item.two.copy': 'Die Websites und die App führen zum nächsten Schritt, ohne Menschen mit Details zu überladen.',
+          'proof.item.three.title': 'Ein Produkt, das wachsen kann.',
+          'proof.item.three.copy': 'Jede Arbeit ist als Grundlage gebaut, die mit dem Unternehmen erweitert werden kann.',
+          'process.label': '03 / Arbeitsweise',
+          'process.title': 'Klar von der Idee<br />bis zum Release.',
+          'process.intro': 'Ein fokussierter, verständlicher Prozess, verbunden mit dem, was das Produkt im echten Leben leisten muss.',
+          'process.one.title': 'Rahmen',
+          'process.one.copy': 'Wir finden die richtige Frage, die Zielgruppe und eine Richtung, die sich zu bauen lohnt.',
+          'process.two.title': 'Formen',
+          'process.two.copy': 'Wir übersetzen die Richtung in Struktur, Identität und ein Erlebnis, das Menschen verstehen.',
+          'process.three.title': 'Bauen',
+          'process.three.copy': 'Wir entwickeln in fokussierten Schritten, damit die Arbeit sichtbar, testbar und verbesserbar bleibt.',
+          'process.four.title': 'Veröffentlichen',
+          'process.four.copy': 'Wir schließen mit den Details ab, die Vertrauen schaffen: Feinschliff, Performance und ein einsatzbereites Release.',
+          'contact.label': '04 / Nächster Schritt',
+          'contact.title': 'Hast du eine Idee, die Wirklichkeit werden soll?',
+          'contact.copy': 'Bring uns die erste Version. Gemeinsam machen wir daraus eine klare Richtung und ein Produkt, das Menschen nutzen können.',
+          'contact.cta': 'Gespräch starten',
+          'contact.email.label': 'Schreib uns',
+          'contact.aside': 'Websites, Apps und digitale Produkte.',
+          'footer.projects': 'Projekte',
+          'footer.process': 'Arbeitsweise',
+          'footer.contact': 'Kontakt'
+        }
+      };
+
       const menuButton = document.querySelector('.menu-button');
       const navLinks = document.querySelector('.nav-links');
       const navItems = [...document.querySelectorAll('.nav-link')];
+      const languageOptions = [...document.querySelectorAll('.language-option')];
       const sections = [...document.querySelectorAll('main section[id]')];
       const revealItems = [...document.querySelectorAll('.reveal:not(.is-visible)')];
+
+      const applyLanguage = (language) => {
+        const selected = translations[language] ? language : 'en';
+        const copy = translations[selected];
+        document.documentElement.lang = selected;
+        document.title = copy['page.title'];
+        document.querySelectorAll('[data-i18n]').forEach((element) => {
+          const value = copy[element.dataset.i18n];
+          if (value !== undefined) element.textContent = value;
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+          const value = copy[element.dataset.i18nHtml];
+          if (value !== undefined) element.innerHTML = value;
+        });
+        document.querySelectorAll('[data-i18n-attr]').forEach((element) => {
+          const [attribute, key] = element.dataset.i18nAttr.split('|');
+          const value = copy[key];
+          if (value !== undefined) element.setAttribute(attribute, value);
+        });
+        document.querySelectorAll('[data-i18n-meta]').forEach((element) => {
+          const [attribute, key] = element.dataset.i18nMeta.split('|');
+          const value = copy[key];
+          if (value !== undefined) element.setAttribute(attribute, value);
+        });
+        languageOptions.forEach((option) => {
+          const active = option.dataset.lang === selected;
+          option.classList.toggle('active', active);
+          option.setAttribute('aria-pressed', String(active));
+        });
+        try { localStorage.setItem('drob-language', selected); } catch {}
+      };
 
       menuButton?.addEventListener('click', () => {
         const open = navLinks.classList.toggle('is-open');
@@ -373,6 +569,9 @@
         menuButton?.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('menu-open');
       }));
+
+      languageOptions.forEach((option) => option.addEventListener('click', () => applyLanguage(option.dataset.lang)));
+      applyLanguage(new URLSearchParams(window.location.search).get('lang') || (() => { try { return localStorage.getItem('drob-language') || 'en'; } catch { return 'en'; } })());
 
       if ('IntersectionObserver' in window) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
