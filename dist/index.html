@@ -1,58 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="sq">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#111111" />
-    <meta name="description" content="DROB Labs turns ambitious ideas into useful websites, apps, games, and custom software." />
-    <title>DROB Labs — Build Beyond</title>
+    <meta name="theme-color" content="#101010" />
+    <meta name="description" content="Portofoli i krijimeve të DROB Labs: Fresh Look, Go Travel & Tours dhe aplikacioni My FreshLook." />
+    <title>DROB Labs — Krijime reale</title>
     <link rel="icon" type="image/png" href="assets/drob-labs-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
         --orange: #ff6a00;
-        --orange-light: #ff7d26;
-        --black: #111111;
-        --ink: #202124;
-        --gray: #6f7277;
-        --paper: #f5f5f2;
+        --orange-light: #ff8a3d;
+        --black: #101010;
+        --ink: #1f2022;
+        --gray: #6d7075;
+        --paper: #f3f2ee;
         --white: #ffffff;
-        --line: #d9d9d2;
-        --line-dark: rgba(255,255,255,.16);
-        --radius: 8px;
+        --line: #d9d8d2;
+        --dark-line: rgba(255,255,255,.16);
         --display: "Space Grotesk", "Segoe UI", Arial, sans-serif;
-        --body: "Inter", "Segoe UI", Arial, sans-serif;
-        --shadow: 0 20px 50px rgba(17,17,17,.14);
+        --body: "DM Sans", "Segoe UI", Arial, sans-serif;
+        --shadow: 0 26px 70px rgba(16,16,16,.16);
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); line-height: 1.55; }
+      body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: var(--body); line-height: 1.55; }
       body.menu-open { overflow: hidden; }
       a { color: inherit; }
-      img { max-width: 100%; display: block; }
+      img { display: block; max-width: 100%; }
       button, a { -webkit-tap-highlight-color: transparent; }
       :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
-
-      .skip-link { position: fixed; top: 12px; left: 12px; z-index: 20; transform: translateY(-180%); padding: 10px 14px; background: var(--orange); color: var(--black); font-weight: 700; text-decoration: none; }
+      .skip-link { position: fixed; top: 12px; left: 12px; z-index: 30; transform: translateY(-180%); padding: 10px 14px; background: var(--orange); color: var(--black); font-weight: 700; text-decoration: none; }
       .skip-link:focus { transform: translateY(0); }
       .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
       .shell { width: min(1240px, calc(100% - 48px)); margin: 0 auto; }
-      .eyebrow, .section-label, .card-kicker, .meta, .nav-link, .menu-button { font-size: .73rem; line-height: 1.2; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+      .eyebrow, .section-label, .meta, .nav-link, .menu-button, .tag { font-size: .73rem; line-height: 1.2; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
       .eyebrow, .section-label { color: var(--orange); }
       .section-label { display: inline-flex; align-items: center; gap: 10px; }
       .section-label::before { content: ""; width: 28px; height: 2px; background: currentColor; }
       h1, h2, h3, p { margin-top: 0; }
-      h1, h2, h3 { font-family: var(--display); line-height: 1.04; letter-spacing: -.035em; }
-      h1 { margin-bottom: 26px; font-size: clamp(3.7rem, 9.5vw, 8.4rem); font-weight: 600; }
-      h2 { margin-bottom: 22px; font-size: clamp(2.45rem, 5vw, 5.2rem); font-weight: 600; }
-      h3 { margin-bottom: 12px; font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: 600; }
-      .lede { font-size: clamp(1.1rem, 1.7vw, 1.35rem); line-height: 1.55; }
+      h1, h2, h3 { font-family: var(--display); line-height: 1.04; letter-spacing: -.04em; }
+      h1 { margin-bottom: 26px; font-size: clamp(3.55rem, 9vw, 8.2rem); font-weight: 600; }
+      h2 { margin-bottom: 22px; font-size: clamp(2.5rem, 5vw, 5.2rem); font-weight: 600; }
+      h3 { margin-bottom: 12px; font-size: clamp(1.55rem, 2.2vw, 2.1rem); font-weight: 600; }
+      .lede { font-size: clamp(1.08rem, 1.7vw, 1.34rem); line-height: 1.55; }
       .muted { color: var(--gray); }
 
-      .site-header { position: sticky; top: 0; z-index: 10; background: rgba(245,245,242,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+      .site-header { position: sticky; top: 0; z-index: 20; background: rgba(243,242,238,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
       .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
       .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--black); text-decoration: none; }
       .brand img { width: 40px; height: 40px; object-fit: contain; }
@@ -63,34 +61,32 @@
       .nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 20px; height: 2px; background: var(--orange); transition: right .24s ease; }
       .nav-link:hover, .nav-link.active { color: var(--black); }
       .nav-link:hover::after, .nav-link.active::after { right: 0; }
-      .nav-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: 4px; background: var(--orange); color: var(--black); font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+      .nav-cta, .button-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 4px; background: var(--orange); color: var(--black); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .2s ease, transform .2s ease; }
       .nav-cta:hover, .button-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
-      .menu-button { display: none; border: 0; padding: 9px 0 9px 10px; color: var(--black); background: transparent; cursor: pointer; }
-      .menu-button span { display: block; width: 24px; height: 2px; margin: 5px 0; background: currentColor; transition: transform .2s ease; }
+      .menu-button { display: none; position: relative; z-index: 22; width: 34px; height: 34px; margin-left: auto; border: 0; padding: 5px; color: var(--black); background: transparent; cursor: pointer; }
+      .menu-button span { display: block; width: 24px; height: 2px; margin: 5px 0; background: currentColor; }
+      .menu-button::before { content: "☰"; display: none; color: var(--black); font-size: 1.45rem; line-height: 1; }
 
-      .hero { position: relative; overflow: hidden; padding: clamp(72px, 10vw, 132px) 0 78px; background: var(--black); color: var(--white); }
-      .hero::before { content: ""; position: absolute; inset: 0; opacity: .52; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, black 0%, transparent 82%); }
+      .hero { position: relative; overflow: hidden; padding: clamp(76px, 10vw, 132px) 0 78px; background: var(--black); color: var(--white); }
+      .hero::before { content: ""; position: absolute; inset: 0; opacity: .52; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, black 0%, transparent 85%); }
       .hero::after { content: ""; position: absolute; width: 260px; height: 260px; right: -120px; top: 30px; border: 28px solid var(--orange); transform: rotate(45deg); opacity: .94; }
-      .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.03fr) minmax(360px, .77fr); align-items: end; gap: clamp(48px, 8vw, 124px); }
+      .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .84fr); align-items: end; gap: clamp(48px, 8vw, 124px); }
       .hero h1 { max-width: 760px; }
       .hero h1 .accent { color: var(--orange); }
-      .hero-copy { max-width: 640px; color: #d9d9d9; }
+      .hero-copy { width: 100%; max-width: 640px; min-width: 0; overflow-wrap: anywhere; color: #d9d9d9; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
-      .button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 20px; border-radius: 4px; font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; text-decoration: none; transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease; }
-      .button-primary { background: var(--orange); color: var(--black); }
-      .button-secondary { border: 1px solid rgba(255,255,255,.35); color: var(--white); }
+      .button-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border: 1px solid rgba(255,255,255,.35); border-radius: 4px; color: var(--white); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: border-color .2s ease, color .2s ease, transform .2s ease; }
       .button-secondary:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
-      .hero-foot { display: flex; flex-wrap: wrap; gap: 16px 34px; margin-top: 52px; padding-top: 18px; border-top: 1px solid var(--line-dark); color: #aeb0b3; font-size: .8rem; }
+      .hero-foot { display: flex; flex-wrap: wrap; gap: 16px 34px; margin-top: 52px; padding-top: 18px; border-top: 1px solid var(--dark-line); color: #aeb0b3; font-size: .82rem; }
       .hero-foot strong { color: var(--white); font-weight: 500; }
-      .hero-visual { align-self: center; }
-      .logo-card { padding: 28px; background: var(--paper); border: 10px solid #e7e7e1; box-shadow: var(--shadow); transform: rotate(2deg); }
-      .logo-card img { width: 100%; }
-      .logo-card-caption { display: flex; justify-content: space-between; gap: 16px; margin-top: 20px; color: var(--gray); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
-      .logo-card-caption strong { color: var(--black); font-weight: 700; }
-      .visual-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 28px; background: var(--line-dark); }
-      .visual-stat { padding: 16px; background: var(--black); }
-      .visual-stat b { display: block; margin-bottom: 4px; color: var(--orange); font: 600 1.5rem var(--display); }
-      .visual-stat span { display: block; color: #b9bbbe; font-size: .78rem; }
+
+      .hero-showcase { position: relative; min-height: 474px; }
+      .showcase-frame { position: absolute; overflow: hidden; background: #fff; border: 10px solid #e5e4dc; box-shadow: var(--shadow); }
+      .showcase-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+      .showcase-frame:first-child { inset: 0 14% 92px 0; transform: rotate(-2.4deg); }
+      .showcase-frame:nth-child(2) { inset: 84px 0 0 25%; transform: rotate(3deg); }
+      .showcase-frame:nth-child(3) { right: 7%; bottom: 17px; width: 31%; height: 184px; border-width: 6px; transform: rotate(-4deg); }
+      .showcase-stamp { position: absolute; z-index: 2; left: 6%; bottom: 22px; display: grid; place-items: center; width: 112px; height: 112px; border: 1px solid var(--orange); border-radius: 50%; color: var(--orange); background: rgba(16,16,16,.82); font: 600 .76rem/1.2 var(--display); text-align: center; text-transform: uppercase; transform: rotate(-11deg); }
 
       .ticker { overflow: hidden; padding: 17px 0; background: var(--orange); color: var(--black); border-bottom: 1px solid var(--black); }
       .ticker-track { display: flex; width: max-content; gap: 40px; animation: drift 24s linear infinite; }
@@ -101,55 +97,54 @@
       .section { padding: clamp(88px, 11vw, 148px) 0; }
       .section-header { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: 40px; align-items: start; margin-bottom: 54px; }
       .section-header h2 { max-width: 820px; }
-      .section-header p { max-width: 550px; margin: 8px 0 0; color: var(--gray); font-size: 1.05rem; }
-      .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-      .service-card { position: relative; min-height: 318px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border: 1px solid var(--line); background: var(--white); transition: background .22s ease, color .22s ease, transform .22s ease; }
-      .service-card:hover { background: var(--black); color: var(--white); transform: translateY(-6px); }
-      .service-card:nth-child(2):hover { background: var(--orange); color: var(--black); }
-      .card-kicker { color: var(--gray); }
-      .service-card:hover .card-kicker { color: inherit; opacity: .68; }
-      .service-card p { color: var(--gray); font-size: .95rem; }
-      .service-card:hover p { color: inherit; opacity: .75; }
-      .service-number { position: absolute; top: 21px; right: 21px; font: 600 1rem var(--display); color: var(--gray); }
-      .service-symbol { width: 54px; height: 54px; display: grid; place-items: center; margin-bottom: 20px; border: 1px solid currentColor; color: var(--orange); font: 600 1.8rem var(--display); }
-      .service-card:hover .service-symbol { color: inherit; }
-      .service-more { display: flex; align-items: center; gap: 8px; color: var(--gray); font-size: .77rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-      .service-more::before { content: ""; width: 22px; height: 2px; background: currentColor; }
+      .section-header p { max-width: 600px; margin: 8px 0 0; color: var(--gray); font-size: 1.05rem; }
 
-      .dark-section { position: relative; overflow: hidden; background: var(--black); color: var(--white); }
-      .dark-section::after { content: ""; position: absolute; width: 440px; height: 440px; right: -220px; bottom: -230px; border: 52px solid var(--orange); border-radius: 50%; opacity: .85; }
-      .dark-section .section-label { position: relative; z-index: 1; }
-      .formats { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-      .format-card { min-height: 430px; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border: 1px solid var(--line-dark); background: rgba(255,255,255,.04); }
-      .format-card:first-child { background: var(--orange); color: var(--black); border-color: var(--orange); }
-      .format-card p { max-width: 310px; color: #aeb0b3; }
-      .format-card:first-child p { color: #322115; }
-      .format-card h3 { max-width: 300px; font-size: 2.1rem; }
-      .format-meta { display: flex; justify-content: space-between; gap: 10px; color: #b9bbbe; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
-      .format-card:first-child .format-meta { color: #322115; }
-      .mini-interface { position: relative; height: 155px; padding: 16px; border: 1px solid currentColor; overflow: hidden; }
-      .mini-interface::before { content: ""; position: absolute; width: 90px; height: 90px; right: -30px; bottom: -36px; border: 17px solid currentColor; transform: rotate(45deg); }
-      .mini-bar { width: 34%; height: 5px; margin-bottom: 13px; background: currentColor; }
-      .mini-lines { display: grid; gap: 8px; }
-      .mini-lines span { width: 72%; height: 5px; background: currentColor; opacity: .62; }
-      .mini-lines span:nth-child(2) { width: 48%; }
-      .mini-lines span:nth-child(3) { width: 62%; }
+      .projects-section { background: var(--white); }
+      .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .project-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); background: var(--paper); transition: transform .24s ease, box-shadow .24s ease; }
+      .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(16,16,16,.12); }
+      .project-card.featured { grid-column: span 2; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); }
+      .project-media { position: relative; min-height: 346px; overflow: hidden; background: #ddd; }
+      .project-media > img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .5s ease; }
+      .project-card:hover .project-media > img { transform: scale(1.025); }
+      .project-card.featured .project-media { min-height: 430px; }
+      .project-info { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 30px; }
+      .project-card.featured .project-info { padding: clamp(28px, 4vw, 54px); }
+      .project-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+      .tag { display: inline-flex; padding: 8px 10px; border: 1px solid currentColor; color: var(--orange); font-size: .67rem; letter-spacing: .1em; }
+      .project-index { color: var(--gray); font: 600 1rem var(--display); }
+      .project-info h3 { max-width: 550px; font-size: clamp(1.8rem, 3vw, 3.1rem); }
+      .project-info p { max-width: 560px; color: var(--gray); font-size: 1rem; }
+      .project-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--gray); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+      .project-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-top: 24px; color: var(--black); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
+      .project-link::after { content: "↗"; color: var(--orange); font-size: 1.25rem; line-height: 1; transition: transform .2s ease; }
+      .project-link:hover::after { transform: translate(3px, -3px); }
+      .freshlook-card .project-info { background: #f3eee5; }
+      .gotravel-card .project-info { background: #e8edf2; }
+      .app-card .project-info { background: #23211f; color: var(--white); }
+      .app-card .project-info p, .app-card .project-meta { color: #bcb9b3; }
+      .app-card .project-link { color: var(--white); }
+      .app-media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; background: #d9d4c8; }
+      .app-media img { min-width: 0; height: 100%; object-fit: cover; object-position: top left; border: 1px solid rgba(16,16,16,.16); }
 
-      .process-section { background: var(--white); }
+      .proof-section { background: var(--black); color: var(--white); }
+      .proof-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(48px, 10vw, 150px); align-items: start; }
+      .proof-intro { color: #b9bbbe; font-size: 1.08rem; }
+      .proof-list { border-top: 1px solid var(--dark-line); }
+      .proof-item { display: grid; grid-template-columns: 52px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--dark-line); }
+      .proof-item strong { display: block; margin-bottom: 5px; font: 600 1.28rem var(--display); }
+      .proof-item p { margin: 0; color: #aeb0b3; font-size: .95rem; }
+      .proof-index { color: var(--orange); font: 600 1rem var(--display); }
+      .proof-note { margin-top: 24px; color: #82858a; font-size: .82rem; }
+      .proof-note a { color: var(--orange); text-decoration: none; }
+      .proof-note a:hover { text-decoration: underline; }
+
+      .process-section { background: var(--paper); }
       .process-list { border-top: 1px solid var(--line); }
       .process-item { display: grid; grid-template-columns: 100px minmax(220px, .7fr) minmax(280px, 1.3fr); gap: 24px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line); }
       .process-index { color: var(--orange); font: 600 1.08rem var(--display); }
       .process-item h3 { margin: 0; font-size: 2rem; }
       .process-item p { max-width: 530px; margin: 0; color: var(--gray); }
-
-      .principles { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(48px, 9vw, 150px); align-items: start; }
-      .principles h2 { max-width: 600px; }
-      .principles-intro { color: #b9bbbe; font-size: 1.08rem; }
-      .principle-list { border-top: 1px solid var(--line-dark); }
-      .principle { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line-dark); }
-      .principle strong { display: block; margin-bottom: 5px; font: 600 1.28rem var(--display); }
-      .principle p { margin: 0; color: #aeb0b3; font-size: .95rem; }
-      .principle-index { color: var(--orange); font: 600 1rem var(--display); }
 
       .contact-section { padding: clamp(74px, 10vw, 120px) 0; background: var(--orange); color: var(--black); }
       .contact-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); gap: 50px; align-items: end; }
@@ -157,7 +152,7 @@
       .contact-section .lede { max-width: 620px; }
       .contact-link { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 14px; padding: 0 22px; border: 1px solid var(--black); border-radius: 4px; color: var(--black); font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; text-decoration: none; transition: background .2s ease, color .2s ease, transform .2s ease; }
       .contact-link:hover { background: var(--black); color: var(--white); transform: translateY(-2px); }
-      .contact-aside { padding-top: 20px; border-top: 1px solid rgba(17,17,17,.36); }
+      .contact-aside { padding-top: 20px; border-top: 1px solid rgba(16,16,16,.36); }
       .contact-aside .meta { color: #322115; }
       .contact-aside strong { display: block; margin-top: 10px; font: 600 1.7rem var(--display); }
 
@@ -166,19 +161,19 @@
       .footer .brand { color: var(--white); }
       .footer .brand img { width: 32px; height: 32px; filter: grayscale(1) brightness(0) invert(1); }
       .footer-note { color: #8f9195; font-size: .78rem; }
-      .footer-links { display: flex; gap: 18px; color: #d6d7d8; font-size: .78rem; text-decoration: none; }
+      .footer-links { display: flex; gap: 18px; color: #d6d7d8; font-size: .78rem; }
       .footer-links a { text-decoration: none; }
       .footer-links a:hover { color: var(--orange); }
 
       .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
       .reveal.is-visible { opacity: 1; transform: translateY(0); }
+      .projects-section .reveal { opacity: 1; transform: none; }
 
       @media (max-width: 980px) {
-        .hero-grid, .principles, .contact-grid { grid-template-columns: 1fr; }
-        .hero-visual { max-width: 640px; }
-        .services-grid { grid-template-columns: repeat(2, 1fr); }
-        .formats { grid-template-columns: 1fr; }
-        .format-card { min-height: 300px; }
+        .hero-grid, .proof-grid, .contact-grid { grid-template-columns: 1fr; }
+        .hero-showcase { max-width: 660px; }
+        .project-card.featured { grid-template-columns: 1fr; }
+        .project-card.featured .project-media { min-height: 370px; }
       }
 
       @media (max-width: 720px) {
@@ -186,6 +181,8 @@
         .site-header { background: var(--paper); }
         .nav { min-height: 66px; }
         .menu-button { display: block; }
+        .menu-button span:not(.sr-only) { display: none; }
+        .menu-button::before { display: block; }
         .nav-links { position: fixed; inset: 66px 0 auto; display: grid; gap: 0; padding: 8px 18px 18px; background: var(--paper); border-bottom: 1px solid var(--line); transform: translateY(-130%); transition: transform .24s ease; }
         .nav-links.is-open { transform: translateY(0); }
         .nav-link { padding: 17px 0; border-bottom: 1px solid var(--line); }
@@ -193,15 +190,21 @@
         .nav-cta { margin-top: 13px; }
         .hero { padding-top: 76px; }
         .hero-grid { gap: 52px; }
-        .hero h1 { font-size: clamp(3.3rem, 16vw, 6rem); }
+        .hero h1 { max-width: 100%; font-size: clamp(2.7rem, 12.5vw, 5rem); overflow-wrap: anywhere; }
         .hero-foot { margin-top: 36px; }
+        .hero-showcase { min-height: 360px; }
+        .showcase-frame:first-child { inset: 0 12% 70px 0; }
+        .showcase-frame:nth-child(2) { inset: 58px 0 0 22%; }
+        .showcase-frame:nth-child(3) { right: 4%; bottom: 10px; width: 33%; height: 132px; }
+        .showcase-stamp { left: 2%; bottom: 10px; width: 84px; height: 84px; font-size: .6rem; }
         .section { padding: 82px 0; }
         .section-header { grid-template-columns: 1fr; gap: 10px; margin-bottom: 34px; }
-        .services-grid { grid-template-columns: 1fr; }
-        .service-card { min-height: 260px; }
+        .project-grid { grid-template-columns: 1fr; }
+        .project-card.featured { grid-column: auto; }
+        .project-media, .project-card.featured .project-media { min-height: 280px; }
+        .app-media { min-height: 280px; }
         .process-item { grid-template-columns: 50px 1fr; gap: 8px 16px; }
         .process-item p { grid-column: 2; }
-        .principles { gap: 40px; }
         .footer-row { align-items: flex-start; flex-direction: column; }
         .footer-links { flex-wrap: wrap; }
       }
@@ -213,19 +216,19 @@
     </style>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">Kalo te përmbajtja</a>
     <header class="site-header">
       <div class="shell nav">
-        <a class="brand" href="#top" aria-label="DROB Labs home">
+        <a class="brand" href="#top" aria-label="DROB Labs në krye">
           <img src="assets/drob-labs-icon.png" alt="" />
           <span class="brand-wordmark">DROB <span>Labs</span></span>
         </a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
-        <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
-          <a class="nav-link active" href="#what-we-build">What we build</a>
-          <a class="nav-link" href="#formats">Formats</a>
-          <a class="nav-link" href="#process">Process</a>
-          <a class="nav-cta" href="#contact">Start a conversation</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Hap menunë</span></button>
+        <nav class="nav-links" id="nav-links" aria-label="Navigimi kryesor">
+          <a class="nav-link active" href="#projects">Krijimet</a>
+          <a class="nav-link" href="#process">Si punojmë</a>
+          <a class="nav-link" href="#contact">Kontakt</a>
+          <a class="nav-cta" href="#contact">Na kontakto</a>
         </nav>
       </div>
     </header>
@@ -234,60 +237,89 @@
       <section class="hero" id="top">
         <div class="shell hero-grid">
           <div class="hero-content reveal is-visible">
-            <div class="eyebrow">Digital product studio / DROB Labs</div>
-            <h1>Build <span class="accent">beyond</span> the brief.</h1>
-            <p class="lede hero-copy">We turn ambitious ideas into useful websites, apps, games, and custom software — clear in direction, confident in execution.</p>
+            <div class="eyebrow">Portofoli / DROB Labs</div>
+            <h1>Krijime <span class="accent">reale.</span><br />Përvoja që punojnë.</h1>
+            <p class="lede hero-copy">Nga prezenca online te produktet mobile, ne krijojmë përvoja digjitale që duken qartë, ndihen natyrshëm dhe bëjnë punën e tyre.</p>
             <div class="hero-actions">
-              <a class="button-primary" href="#what-we-build">Explore what we build</a>
-              <a class="button-secondary" href="#contact">Make it real</a>
+              <a class="button-primary" href="#projects">Shiko krijimet</a>
+              <a class="button-secondary" href="#contact">Nis një bisedë</a>
             </div>
             <div class="hero-foot">
-              <span><strong>Brand promise</strong> / Clarity in. Momentum out.</span>
-              <span><strong>Based on</strong> / Curiosity + craft</span>
+              <span><strong>03</strong> / projekte të prezantuara</span>
+              <span><strong>02</strong> / website-e</span>
+              <span><strong>01</strong> / aplikacion</span>
             </div>
           </div>
-          <div class="hero-visual reveal is-visible">
-            <div class="logo-card">
-              <img src="assets/drob-labs-logo.png" alt="DROB Labs official logo" />
-              <div class="logo-card-caption"><span>Official identity system</span><strong>Build Beyond.</strong></div>
-            </div>
-            <div class="visual-stats">
-              <div class="visual-stat"><b>04</b><span>Ways to turn a thought into a product</span></div>
-              <div class="visual-stat"><b>01</b><span>Point of view behind every release</span></div>
-            </div>
+          <div class="hero-showcase reveal is-visible" aria-label="Pamje nga projektet e DROB Labs">
+            <div class="showcase-frame"><img src="assets/portfolio/freshlook-site.png" alt="Pamje reale nga faqja Fresh Look" /></div>
+            <div class="showcase-frame"><img src="assets/portfolio/gotravel-site.png" alt="Pamje reale nga faqja Go Travel & Tours" /></div>
+            <div class="showcase-frame"><img src="assets/portfolio/appstore-myfreshlook.png" alt="Pamje reale nga listimi i My FreshLook në App Store" /></div>
+            <div class="showcase-stamp">Burime<br />zyrtare</div>
           </div>
         </div>
       </section>
 
-      <div class="ticker" aria-label="DROB Labs brand promise">
-        <div class="ticker-track"><span>Ideas into products</span><span>From first sketch to working release</span><span>Digital products with a point of view</span><span>Ideas into products</span><span>From first sketch to working release</span><span>Digital products with a point of view</span></div>
+      <div class="ticker" aria-label="Fokusi i DROB Labs">
+        <div class="ticker-track"><span>Ide në produkte</span><span>Websites që tregojnë</span><span>Aplikacione që lidhen</span><span>Ide në produkte</span><span>Websites që tregojnë</span><span>Aplikacione që lidhen</span></div>
       </div>
 
-      <section class="section" id="what-we-build">
+      <section class="section projects-section" id="projects">
         <div class="shell">
           <div class="section-header reveal">
-            <div class="section-label">01 / What we build</div>
-            <div><h2>Useful is a creative direction.</h2><p>Good digital products make the next move obvious. We pair a sharp point of view with the structure, design, and code to make it work.</p></div>
+            <div class="section-label">01 / Krijimet</div>
+            <div><h2>Tre produkte.<br />Një standard i qartë.</h2><p>Këto janë disa nga krijimet tona për Fresh Look dhe Go Travel & Tours. Çdo pamje më poshtë është kapur nga website-i ose store-i zyrtar — pa mockup-e të gjeneruara.</p></div>
           </div>
-          <div class="services-grid">
-            <article class="service-card reveal"><span class="service-number">01</span><div><div class="service-symbol">↗</div><div class="card-kicker">Websites</div><h3>Make the first impression count.</h3><p>Websites with a clear story, strong identity, and a reason to keep exploring.</p></div><div class="service-more">Brand-led launches</div></article>
-            <article class="service-card reveal"><span class="service-number">02</span><div><div class="service-symbol">□</div><div class="card-kicker">Apps</div><h3>Turn complexity into flow.</h3><p>Interfaces and product systems that make useful things feel natural to use.</p></div><div class="service-more">Product experiences</div></article>
-            <article class="service-card reveal"><span class="service-number">03</span><div><div class="service-symbol">✳</div><div class="card-kicker">Games</div><h3>Give interaction a pulse.</h3><p>Playful worlds, mechanics, and interfaces built to create memorable moments.</p></div><div class="service-more">Interactive ideas</div></article>
-            <article class="service-card reveal"><span class="service-number">04</span><div><div class="service-symbol">+</div><div class="card-kicker">Custom software</div><h3>Build what the template cannot.</h3><p>Purpose-built tools for teams who need a smarter way to get work done.</p></div><div class="service-more">Made for the edge case</div></article>
+
+          <div class="project-grid">
+            <article class="project-card featured freshlook-card reveal">
+              <div class="project-media"><img src="assets/portfolio/freshlook-site.png" alt="Fresh Look Aesthetics website, pamje reale e faqes kryesore" loading="lazy" /></div>
+              <div class="project-info">
+                <div>
+                  <div class="project-top"><span class="tag">Website / E-commerce</span><span class="project-index">01</span></div>
+                  <h3>Fresh Look Aesthetics</h3>
+                  <p>Një përvojë e qetë dhe e qartë për trajtime estetike, produkte skincare, akademinë dhe rezervimet online.</p>
+                </div>
+                <div><div class="project-meta"><span>freshlook-ks.com</span><span>Web design + build</span></div><a class="project-link" href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer">Vizito website-in</a></div>
+              </div>
+            </article>
+
+            <article class="project-card gotravel-card reveal">
+              <div class="project-media"><img src="assets/portfolio/gotravel-site.png" alt="Go Travel & Tours website, pamje reale e faqes kryesore" loading="lazy" /></div>
+              <div class="project-info">
+                <div>
+                  <div class="project-top"><span class="tag">Website / Travel</span><span class="project-index">02</span></div>
+                  <h3>Go Travel & Tours</h3>
+                  <p>Një faqe e drejtpërdrejtë për udhëtime, fluturime, hotele dhe paketa pushimesh nga Prishtina dhe Tirana.</p>
+                </div>
+                <div><div class="project-meta"><span>gotravelandtours.al</span><span>Web design + build</span></div><a class="project-link" href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer">Vizito website-in</a></div>
+              </div>
+            </article>
+
+            <article class="project-card app-card reveal">
+              <div class="project-media app-media">
+                <img src="assets/portfolio/appstore-myfreshlook.png" alt="My FreshLook në App Store, pamje reale e listimit" loading="lazy" />
+                <img src="assets/portfolio/playstore-myfreshlook.png" alt="My FreshLook në Google Play, pamje reale e listimit" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <div>
+                  <div class="project-top"><span class="tag">Mobile app / iOS + Android</span><span class="project-index">03</span></div>
+                  <h3>My FreshLook</h3>
+                  <p>Aplikacioni zyrtar për rezervime, vizita, produkte dhe Fresh Points — i disponueshëm në App Store dhe Google Play.</p>
+                </div>
+                <div><div class="project-meta"><span>App Store + Google Play</span><span>Product experience</span></div><a class="project-link" href="https://apps.apple.com/gb/app/my-freshlook/id6778583576" target="_blank" rel="noreferrer">Shiko në App Store</a></div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section dark-section" id="formats">
-        <div class="shell">
-          <div class="section-header reveal">
-            <div class="section-label">02 / Formats</div>
-            <div><h2>Different outputs. Same standard.</h2><p>Whether the work starts as a landing page or a product system, the goal stays the same: make the idea clearer, more useful, and ready for its next step.</p></div>
-          </div>
-          <div class="formats">
-            <article class="format-card reveal"><div><div class="mini-interface"><div class="mini-bar"></div><div class="mini-lines"><span></span><span></span><span></span></div></div><div class="card-kicker" style="margin-top:26px">Launch surfaces</div><h3>Tell the story before you tell the specs.</h3><p>Brand pages, launch sites, and digital homes that move people from curious to convinced.</p></div><div class="format-meta"><span>01 / Clarity</span><span>Web</span></div></article>
-            <article class="format-card reveal"><div><div class="mini-interface"><div class="mini-bar" style="width:58%"></div><div class="mini-lines"><span style="width:48%"></span><span style="width:78%"></span><span style="width:56%"></span></div></div><div class="card-kicker" style="margin-top:26px">Product systems</div><h3>Make the right action feel easy.</h3><p>Interfaces, dashboards, and app foundations that give complexity a simple shape.</p></div><div class="format-meta"><span>02 / Momentum</span><span>Apps</span></div></article>
-            <article class="format-card reveal"><div><div class="mini-interface"><div class="mini-bar" style="width:46%"></div><div class="mini-lines"><span style="width:86%"></span><span style="width:62%"></span><span style="width:72%"></span></div></div><div class="card-kicker" style="margin-top:26px">Interactive worlds</div><h3>Make people want to stay.</h3><p>Games and playful digital experiences that reward attention with a point of view.</p></div><div class="format-meta"><span>03 / Character</span><span>Interactive</span></div></article>
+      <section class="section proof-section">
+        <div class="shell proof-grid">
+          <div class="reveal"><div class="section-label">02 / Çfarë shohim</div><h2>Një ekran i mirë e bën hapin tjetër të dukshëm.</h2><p class="proof-intro">Krijimet më të mira nuk kërkojnë shumë shpjegime. Ato krijojnë besim, e bëjnë veprimin të qartë dhe lënë hapësirë për përvojën.</p><p class="proof-note">Pamjet në këtë faqe janë kapur nga <a href="https://www.freshlook-ks.com/" target="_blank" rel="noreferrer">freshlook-ks.com</a>, <a href="https://www.gotravelandtours.al/" target="_blank" rel="noreferrer">gotravelandtours.al</a> dhe listimet zyrtare të My FreshLook.</p></div>
+          <div class="proof-list reveal">
+            <article class="proof-item"><div class="proof-index">01</div><div><strong>Identitet që njihet.</strong><p>Ngjyrat, ritmi dhe tipografia i japin secilit produkt një karakter të dallueshëm.</p></div></article>
+            <article class="proof-item"><div class="proof-index">02</div><div><strong>Rrjedhë pa zhurmë.</strong><p>Faqet dhe aplikacioni e çojnë përdoruesin te veprimi i radhës pa e humbur në detaje.</p></div></article>
+            <article class="proof-item"><div class="proof-index">03</div><div><strong>Produkt që vazhdon.</strong><p>Çdo krijim është ndërtuar si një themel që mund të zgjerohet me nevojat e biznesit.</p></div></article>
           </div>
         </div>
       </section>
@@ -295,41 +327,30 @@
       <section class="section process-section" id="process">
         <div class="shell">
           <div class="section-header reveal">
-            <div class="section-label">03 / Process</div>
-            <div><h2>A faster path to working release.</h2><p>We keep the work moving by making decisions visible, progress tangible, and every phase connected to the outcome.</p></div>
+            <div class="section-label">03 / Si punojmë</div>
+            <div><h2>Qartë nga ideja<br />deri te release-i.</h2><p>Një proces i fokusuar, i kuptueshëm dhe i lidhur me atë që duhet të bëjë produkti në jetën reale.</p></div>
           </div>
           <div class="process-list">
-            <article class="process-item reveal"><div class="process-index">01</div><h3>Align</h3><p>We find the useful question underneath the idea, define the audience, and set a direction worth building.</p></article>
-            <article class="process-item reveal"><div class="process-index">02</div><h3>Shape</h3><p>We turn the direction into a clear structure, a visual language, and a product experience people can understand.</p></article>
-            <article class="process-item reveal"><div class="process-index">03</div><h3>Build</h3><p>We make the real thing in focused slices, so the work can be seen, used, and improved while it is still flexible.</p></article>
-            <article class="process-item reveal"><div class="process-index">04</div><h3>Ship</h3><p>We finish with the details that create confidence: polish, performance, and a release ready for the next move.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section dark-section">
-        <div class="shell principles">
-          <div class="reveal"><div class="section-label">04 / Point of view</div><h2>Confident enough to lead. Clear enough to trust.</h2><p class="principles-intro">Creative without being chaotic. Technical without being cold. Practical, direct, and curious.</p></div>
-          <div class="principle-list reveal">
-            <article class="principle"><div class="principle-index">01</div><div><strong>Value before vocabulary.</strong><p>We explain what the work makes possible before we explain how it works.</p></div></article>
-            <article class="principle"><div class="principle-index">02</div><div><strong>Point of view with purpose.</strong><p>Every visual choice should make the product easier to recognize, use, or remember.</p></div></article>
-            <article class="principle"><div class="principle-index">03</div><div><strong>Useful is the finish line.</strong><p>We measure a release by what people can do with it, not by how impressive the process sounds.</p></div></article>
+            <article class="process-item reveal"><div class="process-index">01</div><h3>Kuadrojmë</h3><p>Gjejmë pyetjen e duhur, audiencën dhe drejtimin që ia vlen të ndërtohet.</p></article>
+            <article class="process-item reveal"><div class="process-index">02</div><h3>Formësojmë</h3><p>E kthejmë drejtimin në strukturë, identitet dhe përvojë që mund të kuptohet menjëherë.</p></article>
+            <article class="process-item reveal"><div class="process-index">03</div><h3>Ndërtojmë</h3><p>Krijojmë me hapa të fokusuar, që puna të shihet, testohet dhe përmirësohet ndërsa rritet.</p></article>
+            <article class="process-item reveal"><div class="process-index">04</div><h3>Publikojmë</h3><p>E mbyllim me detajet që krijojnë besim: polish, performancë dhe një release gati për përdorim.</p></article>
           </div>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div class="shell contact-grid reveal">
-          <div><div class="section-label" style="color:var(--black)">05 / Start here</div><h2>Have an idea with somewhere to go?</h2><p class="lede">Bring the rough version. We will help turn it into a clear next step.</p><a class="contact-link" href="mailto:hello@droblabs.com">Start a conversation</a></div>
-          <div class="contact-aside"><div class="meta">Direct line</div><strong>hello@droblabs.com</strong><p style="margin:8px 0 0; color:#322115">Websites, apps, games, and custom software.</p></div>
+          <div><div class="section-label" style="color:var(--black)">04 / Hapi tjetër</div><h2>Ke një ide që meriton të bëhet reale?</h2><p class="lede">Na sill versionin e parë. Bashkë e kthejmë në një drejtim të qartë dhe në një produkt që mund të përdoret.</p><a class="contact-link" href="mailto:hello@droblabs.com">Nis një bisedë</a></div>
+          <div class="contact-aside"><div class="meta">Na shkruaj</div><strong>hello@droblabs.com</strong><p style="margin:8px 0 0; color:#322115">Website-e, aplikacione dhe produkte digjitale.</p></div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="shell footer-row">
-        <a class="brand" href="#top" aria-label="Back to top"><img src="assets/drob-labs-icon.png" alt="" /><span class="brand-wordmark">DROB <span>Labs</span></span></a>
-        <div class="footer-links"><a href="#what-we-build">What we build</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+        <a class="brand" href="#top" aria-label="Kthehu në krye"><img src="assets/drob-labs-icon.png" alt="" /><span class="brand-wordmark">DROB <span>Labs</span></span></a>
+        <div class="footer-links"><a href="#projects">Krijimet</a><a href="#process">Si punojmë</a><a href="#contact">Kontakt</a></div>
         <div class="footer-note">© 2026 DROB Labs / Build Beyond.</div>
       </div>
     </footer>
